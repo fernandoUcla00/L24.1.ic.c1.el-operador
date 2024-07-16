@@ -35,15 +35,15 @@ export default class CL_Operador {
     bonoHorasExtras() {
         if (this.horasTrabajadas > 40) {
             switch (this.tipo) {
-                case 1: return (this.preciohoras * this.horasTrabajadas)* 0.32;
+                case 1: return this.preciohoras * (this.horasTrabajadas-40)* 0.32;
                     break;
-                case 2: return (this.preciohoras * this.horasTrabajadas )* 0.23;
+                case 2: return this.preciohoras * (this.horasTrabajadas-40) * 0.23;
                     break;
-                case 3: return (this.preciohoras * this.horasTrabajadas) * 0.17;
+                case 3: return this.preciohoras * (this.horasTrabajadas-40) * 0.17;
                     break;
-                case 4: return (this.preciohoras * this.horasTrabajadas) * 0.07;
+                case 4: return this.preciohoras * (this.horasTrabajadas-40) * 0.07;
                     break;
-                case 5: return (this.preciohoras * this.horasTrabajadas) * 0.05;
+                case 5: return this.preciohoras * (this.horasTrabajadas-40) * 0.05;
                     break;
                 default: return 0;
 
