@@ -9,4 +9,4 @@ let Iopera = new CL_IOperador(),
     opera = new CL_Operador(c, t, h, p),
 
     salida = document.getElementById("salida");
-salida.innerHTML = Iopera.reporteOperador(opera.cedula, opera.tipo, opera.horasTrabajadas, opera.preciohoras, opera.bonoHorasExtras(), opera.totalCobrar());
+salida.innerHTML = Iopera.reporteOperador(opera.cedula, opera.horasTrabajadas, opera.preciohoras, opera.bonoHorasExtras(), opera.totalCobrar());

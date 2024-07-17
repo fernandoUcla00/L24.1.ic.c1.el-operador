@@ -15,12 +15,10 @@ export default class CL_IOperador {
         return prompt("Ingrese el precio de la hora base ");
     }
 
-    reporteOperador(c, t, h, p, b, to) {
+    reporteOperador(c, h, p, b, to) {
         return `
       <br>
       Cedula: ${c}
-      <br>
-      Tipo de operador: ${t}
       <br>
       Horas trabajadas: ${h}
       <br>
