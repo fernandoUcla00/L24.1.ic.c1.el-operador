@@ -32,18 +32,19 @@ export default class CL_Operador {
         return this._preciohoras;
     }
 
+
     bonoHorasExtras() {
         if (this.horasTrabajadas > 40) {
             switch (this.tipo) {
-                case 1: return this.preciohoras * (this.horasTrabajadas-40)* 0.32;
+                case 1: return (this.preciohoras * this.cantidadHorasExtras() )* 0.32;
                     break;
-                case 2: return this.preciohoras * (this.horasTrabajadas-40) * 0.23;
+                case 2: return (this.preciohoras * this.cantidadHorasExtras()) * 0.23;
                     break;
-                case 3: return this.preciohoras * (this.horasTrabajadas-40) * 0.17;
+                case 3: return (this.preciohoras * this.cantidadHorasExtras())* 0.17;
                     break;
-                case 4: return this.preciohoras * (this.horasTrabajadas-40) * 0.07;
+                case 4: return (this.preciohoras * this.cantidadHorasExtras()) * 0.07;
                     break;
-                case 5: return this.preciohoras * (this.horasTrabajadas-40) * 0.05;
+                case 5: return (this.preciohoras * this.cantidadHorasExtras()) * 0.05;
                     break;
                 default: return 0;
 
@@ -53,6 +54,17 @@ export default class CL_Operador {
             return 0;
         }
     }
+
+    cantidadHorasExtras() {
+        if(this.horasTrabajadas>40){
+            return this.horasTrabajadas - 40;
+        }
+        else{
+            return 0;
+        }
+        
+    }
+
 
     totalCobrar() {
         return this.horasTrabajadas * this.preciohoras + this.bonoHorasExtras();

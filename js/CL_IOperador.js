@@ -15,7 +15,7 @@ export default class CL_IOperador {
         return prompt("Ingrese el precio de la hora base ");
     }
 
-    reporteOperador(c, h, p, b, to) {
+    reporteOperador(c, h, p, b, to,ch) {
         return `
       <br>
       Cedula: ${c}
@@ -27,6 +27,7 @@ export default class CL_IOperador {
       Bono por horas extras: ${b}
       <br>
       Total a cobrar: ${to}
+      <br>cantida de horas extras: ${ch}
       `
     }
 }
