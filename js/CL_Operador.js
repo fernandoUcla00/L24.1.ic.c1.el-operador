@@ -50,23 +50,26 @@ export default class CL_Operador {
 
             }
         }
+        else{
+            return 0;
+        }
+    }
+
+    cantidadHorasExtras(){
+        if(this.horasTrabajadas>40){
+            return this.horasTrabajadas - 40;
+        }
         else {
             return 0;
         }
     }
 
-    cantidadHorasExtras() {
-        if(this.horasTrabajadas>40){
-            return this.horasTrabajadas - 40;
-        }
-        else{
-            return 0;
-        }
-        
-    }
+    
 
-
-    totalCobrar() {
+    totalCobrar(){
         return this.horasTrabajadas * this.preciohoras + this.bonoHorasExtras();
     }
+
+
+
 }
